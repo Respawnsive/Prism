@@ -847,8 +847,11 @@ namespace Prism.Navigation
                     PageUtilities.SetAutowireViewModelOnPage(navPage.CurrentPage);
                     _pageBehaviorFactory.ApplyPageBehaviors(navPage.CurrentPage);
                 }
-                else if(child is TabbedPage subTabbedPage)
-                    ConfigureTabbedPage(subTabbedPage, segment);
+                else if (child is TabbedPage subTabbedPage)
+                {
+                    var subSegment = UriParsingHelper.GetSubSegment(segment);
+                    ConfigureTabbedPage(subTabbedPage, subSegment);
+                }
             }
 
             var parameters = UriParsingHelper.GetSegmentParameters(segment);

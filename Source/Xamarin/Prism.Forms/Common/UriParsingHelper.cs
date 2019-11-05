@@ -2,6 +2,7 @@
 using Prism.Services.Dialogs;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Prism.Common
 {
@@ -33,6 +34,19 @@ namespace Prism.Common
         public static string GetSegmentName(string segment)
         {
             return segment.Split('?')[0];
+        }
+
+        public static string GetSubSegment(string segment)
+        {
+            var subSegment = string.Empty;
+            if (segment.Count(c => c == '?') > 1)
+            {
+                var subSegmentIndex = segment.IndexOf('=');
+                if (subSegmentIndex > 0)
+                    subSegment = segment.Substring(subSegmentIndex + 1);
+            }
+
+            return subSegment;
         }
 
         public static INavigationParameters GetSegmentParameters(string segment)
