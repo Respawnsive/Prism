@@ -1,15 +1,17 @@
-﻿# Prism
+# Prism
 
-Prism is a framework for building loosely coupled, maintainable, and testable XAML applications in WPF, and Xamarin Forms. Separate releases are available for each platform and those will be developed on independent timelines. Prism provides an implementation of a collection of design patterns that are helpful in writing well-structured and maintainable XAML applications, including MVVM, dependency injection, commands, EventAggregator, and others. Prism's core functionality is a shared code base in both a netstandard2.0 &amp; net45 Library. Those things that need to be platform specific are implemented in the respective libraries for the target platform. Prism also provides great integration of these patterns with the target platform. For example, Prism for Xamarin Forms allows you to use an abstraction for navigation that is unit testable, but that layers on top of the platform concepts and APIs for navigation so that you can fully leverage what the platform itself has to offer, but done in the MVVM way.
-
-Prism 7 is a fully open source version of the Prism guidance [originally produced by Microsoft patterns & practices](http://blogs.msdn.com/b/dotnet/archive/2015/03/19/prism-grows-up.aspx). The core team members were all part of the P&amp;P team that developed Prism 1 through 5, and the effort has now been turned over to the open source community to keep it alive and thriving to support the .NET community. There are thousands of companies who have adopted previous versions of Prism for WPF, Silverlight, and Windows Runtime, and we hope they will continue to move along with us as we continue to evolve and enhance the framework to keep pace with current platform capabilities and requirements.
+Prism is a framework for building loosely coupled, maintainable, and testable XAML applications in WPF, Xamarin Forms, Uno Platform and WinUI. Separate releases are available for each platform and those will be developed on independent timelines. Prism provides an implementation of a collection of design patterns that are helpful in writing well-structured and maintainable XAML applications, including MVVM, dependency injection, commands, EventAggregator, and others. Prism's core functionality is a shared code base supported in .NET Standard 2.0, .NET Framework 4.5 / 4.7. Those things that need to be platform specific are implemented in the respective libraries for the target platform. Prism also provides great integration of these patterns with the target platform. For example, Prism for Xamarin Forms allows you to use an abstraction for navigation that is unit testable, but that layers on top of the platform concepts and APIs for navigation so that you can fully leverage what the platform itself has to offer, but done in the MVVM way.
 
 ## Help Support Prism
 
 As most of you know, it takes a lot of time and effort for our small team to manage and maintain Prism in our spare time. Even though Prism is open source and hosted on GitHub, there are a number of costs associated with maintaining a project such as Prism.  Please be sure to Star the Prism repo and help sponsor Dan and Brian on GitHub.
 
-- Sponsor [Dan](https://xam.dev/sponsor-prism-dan)
-- Sponsor [Brian](https://xam.dev/sponsor-prism-brian)
+Don't forget both Brian and Dan stream live on Twitch and host recorded content on their YouTube Channels. Be sure to Subscribe and Ring that Bell for notifications when they go live or post new content.
+
+| | Sponsor | Twitter | Twitch | YouTube |
+|:-:|:--:|:--:|:--:|:--:|
+| Brian Lagunas | [![GitHub][OctoSponsor]](https://xam.dev/sponsor-prism-brian) | [![Twitter][TwitterLogo]](https://twitter.com/brianlagunas)<br /><span style="font-size:9px">Follow</span> | [![Twitch][TwitchLogo]](https://twitch.tv/brianlagunas)<br /><span style="font-size:9px">Follow & Subscribe</span> | [![YouTube][YouTubeLogo]](https://youtube.com/brianlagunas)<br /><span style="font-size:9px">Subcribe & Ring the Bell</span>
+| Dan Siegel | [![GitHub][OctoSponsor]](https://xam.dev/sponsor-prism-dan) | [![Twitter][TwitterLogo]](https://twitter.com/DanJSiegel)<br /><span style="font-size:9px">Follow</span> | [![Twitch][TwitchLogo]](https://twitch.tv/dansiegel)<br /><span style="font-size:9px">Follow & Subscribe</span> | [![YouTube][YouTubeLogo]](https://youtube.com/dansiegel)<br /><span style="font-size:9px">Subscribe & Ring the Bell</span>
 
 ## Build Status
 
@@ -17,42 +19,38 @@ As most of you know, it takes a lot of time and effort for our small team to man
 | -------- | ------ |
 | Full Build | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Build%20Prism%20Library)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
 | Prism.Core | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Build%20%26%20Test&jobName=Prism.Core)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
-| Prism.Wpf | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Build%20%26%20Test&jobName=Prism.Forms)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
+| Prism.Wpf | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Build%20%26%20Test&jobName=Prism.Wpf)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
 | Prism.Forms | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Build%20%26%20Test&jobName=Prism.Forms)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
+| Prism.Uno | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Build%20%26%20Test&jobName=Prism.Uno)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
 
-### Sandbox Build Status
+### E2E Build Status
 
-| Sandbox | Status |
+| E2E App | Status |
 |---------|:------:|
-| WPF | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Sandbox&jobName=Sandbox%20WPF%20App)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
-| Xamarin iOS | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Sandbox&jobName=Sandbox%20iOS%20App)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
-| Xamarin Android | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=Sandbox&jobName=Sandbox%20Android%20App)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
+| WPF | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=End%20to%20End&jobName=E2E%20WPF%20App)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
+| Xamarin iOS | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=End%20to%20End&jobName=E2E%20iOS%20App)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
+| Xamarin Android | [![Build Status](https://dev.azure.com/prismlibrary/Prism/_apis/build/status/Prism-CI?branchName=master&stageName=End%20to%20End&jobName=E2E%20Android%20App)](https://dev.azure.com/prismlibrary/Prism/_build/latest?definitionId=9&branchName=master) |
 
 ## Support
 
-- Documentation is maintained in [the Prism-Documentation repo](https://github.com/PrismLibrary/Prism-Documentation) under /docs and can be found in a readable format on [the website](http://prismlibrary.github.io/docs/).
+- Documentation is maintained in [the Prism-Documentation repo](https://github.com/PrismLibrary/Prism-Documentation) under /docs and can be found in a readable format on [the website](http://prismlibrary.com/docs/).
 - For general questions and support, post your questions on [StackOverflow](http://stackoverflow.com/questions/tagged/prism).
 - You can enter bugs and feature requests in our [Issues](https://github.com/PrismLibrary/Prism/issues/new/choose).
+- [Enterprise Support](https://avantipoint.com/contact?utm_source=github&utm_medium=prism-readme) is available exclusively from AvantiPoint, and helps to support this project.
 
 ## Videos &amp; Training
 
 By watching our courses, not only do you help support the project financially, but you might also learn something along the way.  We believe this is a win-win for everyone.
 
-- [Introduction to Prism](https://app.pluralsight.com/library/courses/prism-introduction/table-of-contents)
-- [What's New in Prism 5.0](https://app.pluralsight.com/library/courses/prism-50-whats-new/table-of-contents)
-- [Prism Problems & Solutions: Showing Multiple Shells](https://app.pluralsight.com/library/courses/prism-showing-multiple-shells/table-of-contents)
-- [Prism Problems & Solutions: Mastering TabControl](https://app.pluralsight.com/library/courses/prism-mastering-tabcontrol/table-of-contents)
-- [Prism Problems & Solutions: Loading Modules Based on User Roles](https://app.pluralsight.com/library/courses/prism-loading-modules-user-roles/table-of-contents)
-- [Prism Problems & Solutions: Loading Dependent Views](https://app.pluralsight.com/library/courses/prism-problems-solutions/table-of-contents)
+- [Introduction to Prism for WPF (NEW)](https://pluralsight.pxf.io/bE3rB)
+- [Introduction to Prism (Legacy)](https://pluralsight.pxf.io/W1Dz3)
+- [What's New in Prism 5.0](https://pluralsight.pxf.io/z7avm)
+- [Prism Problems & Solutions: Showing Multiple Shells](https://pluralsight.pxf.io/XVxR5)
+- [Prism Problems & Solutions: Mastering TabControl](https://pluralsight.pxf.io/B6X99)
+- [Prism Problems & Solutions: Loading Modules Based on User Roles](https://pluralsight.pxf.io/GvjkE)
+- [Prism Problems & Solutions: Loading Dependent Views](https://pluralsight.pxf.io/a01zj)
 
 We appreciate your support.
-
-### Twitch
-
-Both Brian and Dan are streaming live on a regular basis covering topics for WPF and Xamarin.Forms developers. Be sure to follow and subscribe to find out when they go live.
-
-- [Brian Lagunas](https://twitch.tv/brianlagunas)
-- [Dan Siegel](https://twitch.tv/dansiegel)
 
 ## NuGet Packages
 
@@ -64,13 +62,12 @@ Simply add `https://www.myget.org/F/prism/api/v3/index.json` as a package source
 
 These are the base packages for each platform, together with the Prism's Core assembly as a cross-platform PCL.
 
-| Platform | Assembly | Package | NuGet | MyGet |
-| -------- | -------- | ------- | ------- | ----- |
-| PCL | Prism.dll | [Prism.Core][CoreNuGet] | [![CoreNuGetShield]][CoreNuGet] | [![CoreMyGetShield]][CoreMyGet] |
-| WPF | Prism.Wpf.dll | [Prism.Wpf][WpfNuGet] | [![WpfNuGetShield]][WpfNuGet] | [![WpfMyGetShield]][WpfMyGet] |
-| Xamarin.Forms | Prism.Forms.dll | [Prism.Forms][FormsNuGet] | [![FormsNuGetShield]][FormsNuGet] | [![FormsMyGetShield]][FormsMyGet] |
-<!--
-| Windows 10 UWP | Prism.Windows.dll | [Prism.Windows][UWPNuGet] | [![UWPNuGetShield]][UWPNuGet] | [![UWPMyGetShield]][UWPMyGet] |-->
+| Platform | Package | NuGet | MyGet |
+| -------- | ------- | ------- | ----- |
+| Cross Platform | [Prism.Core][CoreNuGet] | [![CoreNuGetShield]][CoreNuGet] | [![CoreMyGetShield]][CoreMyGet] |
+| WPF | [Prism.Wpf][WpfNuGet] | [![WpfNuGetShield]][WpfNuGet] | [![WpfMyGetShield]][WpfMyGet] |
+| Xamarin.Forms | [Prism.Forms][FormsNuGet] | [![FormsNuGetShield]][FormsNuGet] | [![FormsMyGetShield]][FormsMyGet] |
+| Uno Platform and WinUI | [Prism.Uno][UnoNuGet] | [![UnoNuGetShield]][UnoNuGet] | [![UnoMyGetShield]][UnoMyGet] |
 
 ### Container-specific packages
 
@@ -80,36 +77,16 @@ Each supported IoC container has its own package assisting in the setup and usag
 
 | Package | NuGet | MyGet |
 |---------|-------|-------|
-| [Prism.Autofac][AutofacWpfNuGet]* | [![AutofacWpfNuGetShield]][AutofacWpfNuGet] | see notes |
 | [Prism.DryIoc][DryIocWpfNuGet] | [![DryIocWpfNuGetShield]][DryIocWpfNuGet] | [![DryIocWpfMyGetShield]][DryIocWpfMyGet] |
-| [Prism.Mef][MefWpfNuGet]* | [![MefWpfNuGetShield]][MefWpfNuGet] | see notes |
-| [Prism.Ninject][NinjectWpfNuGet] | [![NinjectWpfNuGetShield]][NinjectWpfNuGet] | [![NinjectWpfMyGetShield]][NinjectWpfMyGet] |
-| [Prism.StructureMap][StructureMapWpfNuGet] | [![StructureMapWpfNuGetShield]][StructureMapWpfNuGet] | see notes |
 | [Prism.Unity][UnityWpfNuGet] | [![UnityWpfNuGetShield]][UnityWpfNuGet] | [![UnityWpfMyGetShield]][UnityWpfMyGet] |
-
-<!--
-#### UWP
-
-| Package | NuGet | MyGet |
-|---------|-------|-------|
-| [Prism.DryIoc.Windows][DryIocUWPNuGet] | [![DryIocUWPNuGetShield]][DryIocUWPNuGet] | [![DryIocUWPMyGetShield]][DryIocUWPMyGet] |
-| [Prism.Unity.Windows][UnityUWPNuGet] | [![UnityUWPNuGetShield]][UnityUWPNuGet] | [![UnityUWPMyGetShield]][UnityUWPMyGet] |
--->
 
 #### Xamarin Forms
 
 | Package | NuGet | MyGet |
 |---------|-------|-------|
-| [Prism.Autofac.Forms][AutofacFormsNuGet]* | [![AutofacFormsNuGetShield]][AutofacFormsNuGet] | see notes |
 | [Prism.DryIoc.Forms][DryIocFormsNuGet] | [![DryIocFormsNuGetShield]][DryIocFormsNuGet] | [![DryIocFormsMyGetShield]][DryIocFormsMyGet] |
 | [Prism.Unity.Forms][UnityFormsNuGet] | [![UnityFormsNuGetShield]][UnityFormsNuGet] | [![UnityFormsMyGetShield]][UnityFormsMyGet] |
-
-#### Package Notices
-
-- Autofac will be removed following the 7.1 release due to it's inability to support Prism Modularity.
-- MEF is no longer supported in Prism 7 as it is not truly a DI Container and lacks the performance that developers deserve.
-- StructureMap has reached EOL as a container. As a result the Prism team will no longer be continuing to provide updates to the StructureMap package moving forward.
-- For developers using Unity with Prism 6, take note that the new Unity maintainer has made major breaking changes. This includes changing namespaces and the package structure. These changes were NOT made by the Prism team nor do we have any control over it. When upgrading to Prism 7 you will need to uninstall the existing Unity package as we now reference the Unity.Container NuGet.
+| [Prism.Forms.Regions][PrismFormsRegionsNuget] | [![PrismFormsRegionsNuGetShield]][PrismFormsRegionsNuGet] | [![PrismFormsRegionsMyGetShield]][PrismFormsRegionsMyGet] |
 
 ![NuGet package tree](images/NuGetPackageTree.png)
 
@@ -117,17 +94,19 @@ A detailed overview of each assembly per package is available [here](http://pris
 
 ## Prism Template Pack
 
-Prism now integrates with Visual Studio and Xamarin Studio to enable a highly productive developer workflow for creating WPF, UWP, and native iOS and Android applications using Xamarin.Forms.  Jump start your Prism apps with code snippets, item templates, and project templates for your IDE of choice.
+Prism integrates with Visual Studio to enable a highly productive developer workflow for creating WPF, and native iOS and Android applications using Xamarin.Forms.  Jump start your Prism apps with code snippets, item templates, and project templates for your IDE of choice.
+
+> **NOTE**
+>
+> The Prism Templates are open source and available at
+>
+> https://github.com/PrismLibrary/Prism.Templates
 
 ### Visual Studio Gallery
 
-The Prism Template Pack is available on the [Visual Studio Gallery](https://visualstudiogallery.msdn.microsoft.com/e7b6bde2-ba59-43dd-9d14-58409940ffa0).  To install, just go to Visual Studio -> Tools -> Extensions and Updates... then search for **Prism** in the online gallery:
+The Prism Template Pack is available on the [Visual Studio Gallery](https://marketplace.visualstudio.com/items?itemName=BrianLagunas.PrismTemplatePack).  To install, just go to Visual Studio -> Tools -> Extensions and Updates... then search for **Prism** in the online gallery:
 
 ![Visual Studio Gallery](images/prism-visual-studio-gallery.jpg)
-
-### Visual Studio for Mac Addin
-
-The Prism Template Studio and Developer Toolkit is available from the Visual Studio Mac Extensions Gallery.
 
 ## Plugins
 
@@ -136,15 +115,22 @@ There are certain things that cannot be added directly into Prism for various re
 - [Prism.Plugin.Popups](https://github.com/dansiegel/Prism.Plugin.Popups) (Forms Only)
 - [Prism.Plugin.Logging](https://github.com/dansiegel/Prism.Plugin.Logging) (Works on all Platforms)
   - Adds support for Syslog, Loggly, Graylog, Application Insights, &amp; App Center
-- [Prism.Plugin.PageDialogs](https://github.com/dansiegel/Prism.Plugin.PageDialogs) (Forms Only)
 - [Prism.Container.Extensions](https://github.com/dansiegel/Prism.Container.Extensions)
   - Adds advanced Container Registration abstractions
-  - Adds DryIoc ContainerExtension with support for Microsoft.DependencyInjection.Extensions &amp; Splat. Uses a singleton pattern to allow initialization from a native platform
+  - Adds DryIoc & Unity ContainerExtension with support for Microsoft.DependencyInjection.Extensions. Uses a singleton pattern to allow initialization from a native platform
   - Provides an extended PrismApplication with additional error handling and platform specifics support for Prism.Forms
+- [Prism.Magician](https://sponsorconnect.dev/nuget/package/prism.magician) (Works with ALL Platforms)
+  - The Magician works to reduce the amount of code you need to write with a collection of intelligent code generators that evaluate your codebase and references
+  - It additionally provides a series of Roslyn Analyzers to help prevent you from making common mistakes
+  - **NOTE:** This package is only available to Dan's [GitHub Sponsors](https://xam.dev/sponsor-prism-dan) and [Enterprise Support](https://avantipoint.com/contact) customers.
 
 ## Samples
 
-We have both a development sandbox (frequently changing) and stable samples for using Prism with WPF, UWP and Xamarin Forms. An overview of the samples can be found [here](Sandbox/README.md).
+For stable samples be sure to check out the samples repo for the platform you are most interested in.
+
+- [Prism for WPF Samples](https://github.com/PrismLibrary/Prism-Samples-Wpf)
+- [Prism for Xamarim.Forms](https://github.com/PrismLibrary/Prism-Samples-Forms)
+- [Prism for Uno Platform](#) (Coming soon)
 
 ## Contributing
 
@@ -159,81 +145,62 @@ This project is part of the [.NET Foundation](http://www.dotnetfoundation.org/pr
 [CoreNuGet]: https://www.nuget.org/packages/Prism.Core/
 [WpfNuGet]: https://www.nuget.org/packages/Prism.Wpf/
 [FormsNuGet]: https://www.nuget.org/packages/Prism.Forms/
-[UWPNuGet]: https://www.nuget.org/packages/Prism.Windows/
+[UnoNuGet]: https://www.nuget.org/packages/Prism.Uno/
 
-[AutofacWpfNuGet]: https://www.nuget.org/packages/Prism.Autofac/
+[PrismFormsRegionsNuGet]: https://www.nuget.org/packages/Prism.Forms.Regions/
+[PrismFormsRegionsMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Forms.Regions
+[PrismFormsRegionsNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Forms.Regions.svg
+[PrismFormsRegionsMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Forms.Regions.svg
+
 [DryIocWpfNuGet]: https://www.nuget.org/packages/Prism.DryIoc/
-[MefWpfNuGet]: https://www.nuget.org/packages/Prism.Mef/
-[NinjectWpfNuGet]: https://www.nuget.org/packages/Prism.Ninject/
-[StructureMapWpfNuGet]: https://www.nuget.org/packages/Prism.StructureMap/
 [UnityWpfNuGet]: https://www.nuget.org/packages/Prism.Unity/
 
-[DryIocUWPNuGet]: https://www.nuget.org/packages/Prism.DryIoc.Windows/
-[UnityUWPNuGet]: https://www.nuget.org/packages/Prism.Unity.Windows/
-
 [UnityFormsNuGet]: https://www.nuget.org/packages/Prism.Unity.Forms/
-[NinjectFormsNuGet]: https://www.nuget.org/packages/Prism.Ninject.Forms/
-[AutofacFormsNuGet]: https://www.nuget.org/packages/Prism.Autofac.Forms/
 [DryIocFormsNuGet]: https://www.nuget.org/packages/Prism.DryIoc.Forms/
 
+[DryIocUnoNuGet]: https://www.nuget.org/packages/Prism.DryIoc.Uno/
+[UnityUnoNuGet]: https://www.nuget.org/packages/Prism.Unity.Uno/
 
 [CoreNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Core.svg
 [WpfNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Wpf.svg
 [FormsNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Forms.svg
-[UWPNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Windows.svg
+[UnoNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Uno.svg
 
-[AutofacWpfNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Autofac.svg
 [DryIocWpfNuGetShield]: https://img.shields.io/nuget/vpre/Prism.DryIoc.svg
-[MefWpfNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Mef.svg
-[NinjectWpfNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Ninject.svg
-[StructureMapWpfNuGetShield]: https://img.shields.io/nuget/vpre/Prism.StructureMap.svg
 [UnityWpfNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Unity.svg
 
-[DryIocUWPNuGetShield]: https://img.shields.io/nuget/vpre/Prism.DryIoc.Windows.svg
-[UnityUWPNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Unity.Windows.svg
-
-[AutofacFormsNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Autofac.Forms.svg
 [DryIocFormsNuGetShield]: https://img.shields.io/nuget/vpre/Prism.DryIoc.Forms.svg
-[NinjectFormsNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Ninject.Forms.svg
 [UnityFormsNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Unity.Forms.svg
 
+[DryIocUnoNuGetShield]: https://img.shields.io/nuget/vpre/Prism.DryIoc.Uno.svg
+[UnityUnoNuGetShield]: https://img.shields.io/nuget/vpre/Prism.Unity.Uno.svg
 
 [CoreMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Core
 [WpfMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Wpf
 [FormsMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Forms
-[UWPMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Windows
+[UnoMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Uno
 
-[AutofacWpfMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Autofac
 [DryIocWpfMyGet]: https://myget.org/feed/prism/package/nuget/Prism.DryIoc
-[MefWpfMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Mef
-[NinjectWpfMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Ninject
-[StructureMapWpfMyGet]: https://myget.org/feed/prism/package/nuget/Prism.StructureMap
 [UnityWpfMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Unity
 
-[DryIocUWPMyGet]: https://myget.org/feed/prism/package/nuget/Prism.DryIoc.Windows
-[UnityUWPMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Unity.Windows
-
 [UnityFormsMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Unity.Forms
-[NinjectFormsMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Ninject.Forms
-[AutofacFormsMyGet]: https://myget.org/feed/prism/package/nuget/Prism.Autofac.Forms
 [DryIocFormsMyGet]: https://myget.org/feed/prism/package/nuget/Prism.DryIoc.Forms
 
 [CoreMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Core.svg
 [WpfMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Wpf.svg
-[UWPMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Windows.svg
 [FormsMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Forms.svg
+[UnoMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Uno.svg
 
-[AutofacWpfMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Autofac.svg
 [DryIocWpfMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.DryIoc.svg
-[MefMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Mef.svg
-[NinjectWpfMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Ninject.svg
-[StructureMapWpfMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.StructureMap.svg
 [UnityWpfMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Unity.svg
 
-[DryIocUWPMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.DryIoc.Windows.svg
-[UnityUWPMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Unity.Windows.svg
-
-[AutofacFormsMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Autofac.Forms.svg
 [DryIocFormsMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.DryIoc.Forms.svg
-[NinjectFormsMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Ninject.Forms.svg
 [UnityFormsMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Unity.Forms.svg
+
+[DryIocUnoMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.DryIoc.Uno.svg
+[UnityUnoMyGetShield]: https://img.shields.io/myget/prism/vpre/Prism.Unity.Uno.svg
+
+[TwitterLogo]: https://dansiegelgithubsponsors.blob.core.windows.net/images/twitter.png
+[TwitchLogo]: https://dansiegelgithubsponsors.blob.core.windows.net/images/twitch.png
+[YouTubeLogo]: https://dansiegelgithubsponsors.blob.core.windows.net/images/youtube.png
+[OctoSponsor]: https://dansiegelgithubsponsors.blob.core.windows.net/images/octosponsor.png
